@@ -7,9 +7,13 @@
   import AppBar from './lib/AppBar.svelte'
  
 </script>
+
+
 <AppBar />
+
 <main>
-  <Page>
+
+  <Page test>
         <div class="container mx-auto px-12 py-12">
         <header class="flex items-center justify-around">
             <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
