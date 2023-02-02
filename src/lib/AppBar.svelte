@@ -1,17 +1,16 @@
 <script>
-	import url from './url'
+	import {push} from 'svelte-spa-router'
  export let label = "nwp-app"
- export let toggle;
 </script>
 
 
 <header class="app-bar">
   <nav>
-    <div class="brand">
+    <div class="brand" on:click={() => push("/")}>
     {label}
     </div>
     <aside>
-      <button on:click={toggle}>
+      <button>
       <span>
       Button 
       </span>
@@ -95,7 +94,8 @@ button {
 .app-bar nav .brand {
     padding: 0 var(--px, 1rem);
     font-size: 1.2rem;
-    font-weight: 600
+    font-weight: 600;
+    cursor: pointer;
 }
 
 </style>
