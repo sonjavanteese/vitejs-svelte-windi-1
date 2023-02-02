@@ -1,6 +1,7 @@
 <script>
 	import url from './url'
  export let label = "nwp-app"
+ export let toggle;
 </script>
 
 
@@ -10,7 +11,7 @@
     {label}
     </div>
     <aside>
-      <button>
+      <button on:click={toggle}>
       <span>
       Button 
       </span>

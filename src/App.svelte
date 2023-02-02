@@ -3,13 +3,17 @@
   import Counter from './lib/Counter.svelte'
   import url from './lib/url';
   import Page from './lib/Page.svelte'
-  import P1 from './P1.svelte'
+  import P2 from './P2.svelte'
   import AppBar from './lib/AppBar.svelte'
- 
+  import ActionSheet from './lib/ActionSheet.svelte'
+  let open;
+  const toggle = () => {
+    open = !open
+  }
 </script>
 
 
-<AppBar />
+<AppBar {toggle} />
 
 <main>
 
@@ -31,7 +35,7 @@
         </div>
 
     </div>
-
+<ActionSheet bind:open={open}/>
     
   </Page>
 </main>
